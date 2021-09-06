@@ -76,7 +76,6 @@ Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니�
 
 
 
-
 ### 4. Search & Rescue 
 
 챌린지 4에서 로봇은 좁은 다리를 거쳐 한쪽 섬에서 반대쪽 섬으로 이동해야 합니다. 반대쪽 섬에 도착하면 기둥을 감지하고 기둥의 색에 따라 오른쪽과 왼쪽 중 주행 방향을 결정합니다. 파란색 기둥의 경우 왼쪽으로 주행해야 하며, 빨간색인 경우는 오른쪽으로 향해야 합니다. 이동한 라인의 끝에서 먹이를 감지하면 그리퍼를 사용하여 이를 집어올리고, 다시 다리를 따라 처음의 섬으로 돌아가 이를 내려놓아야 합니다. 로봇이 다시 돌아가서 추가로 먹이를 얻는 것 또한 가능합니다.<br/><br/>
@@ -89,7 +88,8 @@ Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니�
 ``{Task = drop of food, Robot = hasUltraSonicSensor, hasAGripper, hasColorSensor Environment = pillar on field with white outer lines}``<br/>
 
 #### >> 작업 영상<br/>
-<img src="img/chip4.gif" width="40%">
+|:--:|:--:|
+|<img src="img/chip4-1.gif" width="80%">|<img src="img/chip4-2.gif" width="80%">|
 
 
 ## Result
