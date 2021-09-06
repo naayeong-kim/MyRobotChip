@@ -56,6 +56,11 @@ Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니�
 ``{Task = cross seesaw, Robot = hasWheelAtBack, Environment = seesaw}``<br/>
 
 
+>> 작업 영상
+<img src="img/chip1.gif" width="80%">
+
+
+
 ### 3. Friend or Foe 
 
 챌린지 3에서는 친구(friend)와 적(foe)을 나타내는 기둥이 공존하는 필드에 로봇이 배치됩니다. 로봇은 필드 밖으로 나가지 않아야 하며, 기둥을 감지하여 아군인지 적군인지 판단하고 이에 대해 반응해야 합니다. 아군인 경우와 적군인 경우 각각에 해당하는 노래가 나오도록 설계하여, 두 반응의 명확한 차이점을 관찰할 수 있도록 하였습니다. <br/><br/>
