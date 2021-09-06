@@ -2,7 +2,7 @@
 
 LEGO EV3 Mindstorms 부품을 사용하여 로봇을 만들고, Java를 프로그래밍을 통해 로봇이 환경 내에서 작동하고 상호 작용할 수 있도록 설계한 프로젝트입니다. 시각적 센서를 활용한 총 4개의 테스트가 로봇에게 주어졌으며 Chip은 모든 테스트를 성공적으로 수행하였습니다. 이 프로젝트에서는 로봇의 생태학적 틈새(ecological niche)를 설명하고 디자인 선택과 다양한 문제에서 파생된 문제에 대한 솔루션을 설명합니다. 결과적으로 로봇의 성능과 일반적인 경험에 대한 결론을 얻을 수 있습니다.
 
-이 프로젝트는 Eclipse IDE에서 Java을 이용하여 진행되었으며, 자세한 분석 방법 및 결과는 다음과 같은 추가 코드 파일 및 리포트에서 확인하실 수 있습니다.<br/> 
+이 프로젝트는 Eclipse IDE에서 Java을 이용하여 진행되었으며, 자세한 구현 방법 및 결과는 다음과 같은 추가 코드 파일 및 리포트에서 확인하실 수 있습니다.<br/> 
 - [(해당 연구에 대한 code 보러가기)](/code) <br/>
 - [(해당 연구에 대한 full report 보러가기)](report.pdf) <br/> 
 
@@ -63,12 +63,18 @@ Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니�
 
 ### 3. Friend or Foe 
 
-챌린지 3에서는 친구(friend)와 적(foe)을 나타내는 기둥이 공존하는 필드에 로봇이 배치됩니다. 로봇은 필드 밖으로 나가지 않아야 하며, 기둥을 감지하여 아군인지 적군인지 판단하고 이에 대해 반응해야 합니다. 아군인 경우와 적군인 경우 각각에 해당하는 노래가 나오도록 설계하여, 두 반응의 명확한 차이점을 관찰할 수 있도록 하였습니다. <br/><br/>
+챌린지 3에서는 친구(friend)와 적(foe)을 나타내는 기둥이 공존하는 필드에 로봇이 배치됩니다. 로봇은 필드 밖으로 나가지 않아야 하며, 기둥을 감지하여 아군인지 적군인지 판단하고 이에 대해 반응해야 합니다. 아군인 경우와 적군인 경우 각각에 해당하는 노래가 나오도록 설계하여, 두 반응의 명확한 차이점을 관찰할 수 있도록 하였습니다. 만약 적이 탐지되면 로봇은 적을 제거하기위해 공격적인 행동을 택합니다.<br/><br/>
 
 ``{Task = findObject, Robot = hasUltrasonicSensor , Environment = field with pillars}``<br/>
 ``{Task = stayInsideField, Robot = hasColorSensor , Environment = field with white outer lines}``<br/> 
 ``{Task = reactToPillar, Robot = hasSpeaker, Environment = field with pillars}``<br/>
 ``{Task = detectColor, Robot = hasColorSensor, Environment = pillar with colored circle}``<br/>
+
+
+#### >> 작업 영상<br/>
+<img src="img/chip3.gif" width="40%"><br/>
+
+
 
 
 ### 4. Search & Rescue 
@@ -82,7 +88,8 @@ Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니�
 ``{Task = pick up food, Robot = hasUltraSonicSensor, hasAGripper, Environment = end of white line and an object}``<br/>
 ``{Task = drop of food, Robot = hasUltraSonicSensor, hasAGripper, hasColorSensor Environment = pillar on field with white outer lines}``<br/>
 
-
+#### >> 작업 영상<br/>
+<img src="img/chip4.gif" width="40%">
 
 ## Result
 
