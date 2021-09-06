@@ -10,13 +10,18 @@ LEGO EV3 Mindstorms 부품을 사용하여 로봇을 만들고, Java를 프로�
 
 ### Basic robot design
 
-[가이드라인](https://le-www-live-s.legocdn.com/sc/media/lessons/mindstorms-ev3/building-instructions/ev3-rem-driving-base-79bebfc16bd491186ea9c9069842155e.pdf)을 참조하여 LEGO EV3 Mindstorms 부품으로 기본적인 로봇을 설계하였습니다. 이 디자인은 대부분의 무게가 로봇 뒤쪽에 있기 때문에 매우 안정적입니다. 이후, 컬러 센서와 그리퍼, 자이로스코프의 부착이 가능하도록 구조를 조정하였습니다. 추가적으로, 로봇이 경사면에 있을 때 더 높은 안정성을 보장하기 위해 뒤쪽에 구조를 추가하여 질량 중심을 더 뒤쪽으로 보냈습니다.
-<img src="img/chip.png" width="500" height="500"/> <br/>
+[가이드라인](https://le-www-live-s.legocdn.com/sc/media/lessons/mindstorms-ev3/building-instructions/ev3-rem-driving-base-79bebfc16bd491186ea9c9069842155e.pdf)을 참조하여 LEGO EV3 Mindstorms 부품으로 기본적인 로봇을 설계하였습니다. 이 디자인은 대부분의 무게가 로봇 뒤쪽에 있기 때문에 매우 안정적입니다. 이후, 컬러 센서와 그리퍼, 자이로스코프의 부착이 가능하도록 구조를 조정하였습니다. 추가적으로, 질량 중심을 더 뒤쪽으로 보내 로봇이 경사면에 있을 때 더 높은 안정성을 갖게하기 위하여 뒤쪽에 구조를 추가하였습니다.<br/>
+다음은 그리퍼를 사용하지 않는 챌린지에서 기동성을 위해 그리퍼를 뗀 chip 모델 입니다:
+<img src="img/ChipNew.jpeg" width="500" height="500"/> <br/>
 
 
-### Basic algorithm design
+### Algorithm design
 
-Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니다. 자세한 구현 방법은 full report를 참조하세요.
+Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니다. 자세한 구현 방법은 [full report](report.pdf)를 참조 바랍니다.
+
+### Challenge goal design
+
+과제는 각각 다른 목표를 가진 4개의 작업으로 구성됩니다. 첫 번째 과제의 목적은 로봇이 배치된 환경에서 로봇의 방향을 지정하기 위해 서로 다른 센서의 사용을 결합하는 것입니다. 두 번째 과제는 적절한 속도를 유지하면서 PID 컨트롤러를 가능한 한 매끄럽게 만드는 것이었습니다. 이 도전의 또 다른 목표는 경사면을 오르내릴 수 있는 방식으로 로봇을 설계하는 것이었습니다. 세 번째 과제에서는 색상 인식, 물체 감지 및 행동 표시가 중요한 역할을 했습니다. 챌린지 4의 목표는 로봇이 색상 인식 및 물체 감지에 따라 경로를 선택하고 따르도록 하고 그리퍼를 사용하여 주어진 위치에서 물체를 현지화, 잡고 떨어뜨리는 것이었습니다.
 
 
 ## Challenges
@@ -28,20 +33,52 @@ Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니�
 - 다음, 미로의 라인을 따라 2개의 체크포인트를 거쳐 두 번째 기둥에 도달하여 반응합니다. 
 <br/><br/>
 
-{Task = line following, Robot = hasColorSensor, Environment = Grid}
-{Task = counting corners, Robot = hasGyroscope, Environment = Grid}
-{Task = going to the other side of the line , Robot = hasColorSensor, Environment = white line} {Task = findObject, Robot = hasUltrasonicSensor , Environment = middle of the grid, pillar} {Task = reactToPillar Robot = hasUltrasonicSensor , Environment = Pillar}
-{Task = solveMaze, Robot = hasColorSensor, Environment = Maze}
+``{Task = line following, Robot = hasColorSensor, Environment = Grid}``<br/>
+``{Task = counting corners, Robot = hasGyroscope, Environment = Grid}``<br/>
+``{Task = going to the other side of the line , Robot = hasColorSensor, Environment = white line}``<br/>
+``{Task = findObject, Robot = hasUltrasonicSensor , Environment = middle of the grid, pillar}``<br/>
+``{Task = reactToPillar Robot = hasUltrasonicSensor , Environment = Pillar}``<br/>
+``{Task = solveMaze, Robot = hasColorSensor, Environment = Maze}``<br/>
 
 
 ### 2. Run for your life 
 
+챌린지 2에서 로봇은 라인을 따라 부드럽게 여러 장애물을 건너야 합니다. 특히 경사면과 같은 장애물은 로봇 설계에 영향을 주는 주요 요인입니다.
+<br/><br/>
+
+``{Task = line following, Robot = hasColorSensor, Environment = bridge}``<br/>
+``{Task = line following, Robot = hasColorSensor, Environment = seesaw}``<br/>
+``{Task = cross bridge, Robot = weight, Environment = bridge}``<br/>
+``{Task = cross seesaw, Robot = weight, Environment = seesaw}``<br/>
+``{Task = cross bridge, Robot = hasWheelAtBack, Environment = bridge}``<br/> 
+``{Task = cross seesaw, Robot = hasWheelAtBack, Environment = seesaw}``<br/>
+
 
 ### 3. Friend or Foe 
+
+챌린지 3에서는 친구(friend)와 적(foe)을 나타내는 기둥이 공존하는 필드에 로봇이 배치됩니다. 로봇은 필드 밖으로 나가지 않아야 하며, 기둥을 감지하여 아군인지 적군인지 판단하고 이에 대해 반응해야 합니다. 아군인 경우와 적군인 경우 각각에 해당하는 노래가 나오도록 설계하여, 두 반응의 명확한 차이점을 관찰할 수 있도록 하였습니다. <br/><br/>
+
+``{Task = findObject, Robot = hasUltrasonicSensor , Environment = field with pillars}``<br/>
+``{Task = stayInsideField, Robot = hasColorSensor , Environment = field with white outer lines}``<br/> 
+``{Task = reactToPillar, Robot = hasSpeaker, Environment = field with pillars}``<br/>
+``{Task = detectColor, Robot = hasColorSensor, Environment = pillar with colored circle}``<br/>
 
 
 ### 4. Search & Rescue 
 
+챌린지 4에서 로봇은 좁은 다리를 거쳐 한쪽 섬에서 반대쪽 섬으로 이동해야 합니다. 반대쪽 섬에 도착하면 기둥을 감지하고 기둥의 색에 따라 오른쪽과 왼쪽 중 주행 방향을 결정합니다. 파란색 기둥의 경우 왼쪽으로 주행해야 하며, 빨간색인 경우는 오른쪽으로 향해야 합니다. 이동한 라인의 끝에서 먹이를 감지하면, 그리퍼를 사용하여 이를 집고, 다리를 따라 처음의 섬으로 돌아와 이를 내려놓아야 합니다. 로봇이 다시 돌아가서 추가로 먹이를 얻는 것 또한 가능합니다.<br/><br/>
 
+``{Task = go to narrow passage, hasGyroscope, Robot = hasColorSensor , Environment = field with white outer lines}``<br/>
+``{Task = line following, Robot = hasColorSensor, hasGyroscope, Environment = white line on bridge and ground }``<br/>
+``{Task = detect colour healthy food, Robot = hasColorSensor, hasUltraSonicSensor, Environment = pillar with colored circle from close distance of splitting made of a white line}``<br/>
+``{Task = walk to healthy food, Robot = hasColorSensor, Environment = white line}``<br/>
+``{Task = pick up food, Robot = hasUltraSonicSensor, hasAGripper, Environment = end of white line and an object}``<br/>
+``{Task = drop of food, Robot = hasUltraSonicSensor, hasAGripper, hasColorSensor Environment = pillar on field with white outer lines}``<br/>
+
+
+
+## Result
+
+자세한 결과 및 고찰은 [full report](report.pdf)를 참조 바랍니다.
 
 
