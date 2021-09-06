@@ -71,10 +71,6 @@ Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니�
 ``{Task = detectColor, Robot = hasColorSensor, Environment = pillar with colored circle}``<br/>
 
 
-#### >> 작업 영상<br/>
-<img src="img/chip3.gif" width="40%"><br/>
-
-
 
 ### 4. Search & Rescue 
 
