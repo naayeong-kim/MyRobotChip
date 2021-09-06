@@ -56,8 +56,8 @@ Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니�
 ``{Task = cross seesaw, Robot = hasWheelAtBack, Environment = seesaw}``<br/>
 
 
->> 작업 영상
-<img src="img/chip1.gif" width="80%">
+>>> 작업 영상<br/>
+<img src="img/chip1.gif" width="50%">
 
 
 
