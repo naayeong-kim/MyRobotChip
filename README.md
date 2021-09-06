@@ -13,7 +13,7 @@ LEGO EV3 Mindstorms 부품을 사용하여 로봇을 만들고, Java를 프로�
 [가이드라인](https://le-www-live-s.legocdn.com/sc/media/lessons/mindstorms-ev3/building-instructions/ev3-rem-driving-base-79bebfc16bd491186ea9c9069842155e.pdf)을 참조하여 LEGO EV3 Mindstorms 부품으로 기본적인 로봇을 설계하였습니다. 이 디자인은 대부분의 무게가 로봇 뒤쪽에 있기 때문에 매우 안정적입니다. 이후, 컬러 센서와 그리퍼, 자이로스코프의 부착이 가능하도록 구조를 조정하였습니다. 추가적으로, 질량 중심을 더 뒤쪽으로 보내 로봇이 경사면에 있을 때 더 높은 안정성을 갖게하기 위하여 뒤쪽에 구조를 추가하였습니다.<br/>
 
 
-다음은 그리퍼를 사용하지 않는 챌린지에서 기동성을 위해 그리퍼를 뗀 chip 모델 입니다:
+다음은 그리퍼를 사용하지 않는 챌린지에서 기동성을 위해 그리퍼를 뗀 chip 모델 입니다:<br/>
 <img src="img/ChipNew.jpeg" width="40%"/> <br/>
 
 
