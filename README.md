@@ -88,8 +88,8 @@ Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니�
 ``{Task = drop of food, Robot = hasUltraSonicSensor, hasAGripper, hasColorSensor Environment = pillar on field with white outer lines}``<br/>
 
 #### >> 작업 영상<br/>
-|:--:|:--:|
-|<img src="img/chip4-1.gif" width="80%">|<img src="img/chip4-2.gif" width="80%">|
+
+|<img src="img/chip4-1.gif" width="40%">|<img src="img/chip4-2.gif" width="40%">|
 
 
 ## Result
