@@ -14,7 +14,7 @@ LEGO EV3 Mindstorms 부품을 사용하여 로봇을 만들고, Java를 프로�
 
 
 다음은 그리퍼를 사용하지 않는 챌린지에서 기동성을 위해 그리퍼를 뗀 chip 모델 입니다:<br/>
-<img src="img/ChipNew.jpeg" width="90%"/> <br/>
+<img src="img/ChipNew.jpeg" width="55%"/> <br/>
 
 
 ### Algorithm design
@@ -60,7 +60,7 @@ Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니�
 
 | 길 탐지 및 경사면 테스트 |
 |:--:|
-|<img src="img/chip1.gif" width="40%"/>|<br/>
+|<img src="img/chip1.gif" width="90%"/>|<br/>
 
 
 
