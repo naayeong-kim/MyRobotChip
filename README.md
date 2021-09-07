@@ -92,7 +92,7 @@ Line following 알고리즘과 Friend or Foe 알고리즘을 제작하였습니�
 
 | 색상 인식 후 이동 방향 결정 | 그리퍼 안정성 구현 및 나머지 작업 수행 |
 |:--:|:--:|
-| <img src="img/chip4-2.gif" width="85%"/> | <img src="img/chip4-1.gif" width="85%/"> |
+|<img src="img/chip4-2.gif" width="85%"/>|<img src="img/chip4-1.gif" width="85%/">|
 <br/><br/>
 
 
