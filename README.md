@@ -14,7 +14,7 @@ LEGO EV3 Mindstorms 부품을 사용하여 로봇을 만들고, Java를 프로�
 
 | 그리퍼 탈부착형 Chip 모델 |
 |:--:|
-|<img src="img/ChipNew.jpeg" width="90%"/>|<br/>
+|<img src="img/ChipNew.jpeg" width="50%"/>|<br/>
 <br/>
 
 
